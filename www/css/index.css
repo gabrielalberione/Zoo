@@ -1,0 +1,229 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    font-family:'FontAwesome', sans-serif !important;
+	height: 100%;
+}
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.wikizoo_img{
+	height: 80px; 
+	width: 80px; 
+	background-position: center;  
+	background-size: 80px 80px;
+	border-radius: 80px;	
+	margin: auto;
+}
+
+.wikizoo_nombre{
+	text-align: center; 
+	margin-top: 10px;
+	font-size: 17px;
+	color: #006940 !important;	
+}
+
+.top_zoo{
+	background-color: #006940;
+	color: #FBFCF3;
+	border: 0px;
+}
+
+.menu_zoo ul>li>a{
+	color: #006940;
+	font-weight: 700;
+}
+
+.menu_zoo ul>li>a:hover{
+	background-color: #e5e5e5;
+	color: #006940;
+}
+
+.menu_zoo ul>li{
+	margin-bottom: 10px;
+}
+
+/* jssor slider arrow navigator skin 21 css */
+/*
+.jssora21l                  (normal)
+.jssora21r                  (normal)
+.jssora21l:hover            (normal mouseover)
+.jssora21r:hover            (normal mouseover)
+.jssora21l.jssora21ldn      (mousedown)
+.jssora21r.jssora21rdn      (mousedown)
+*/
+.jssora21l, .jssora21r {
+	display: block;
+	position: absolute;
+	/* size of arrow element */
+	width: 55px;
+	height: 55px;
+	cursor: pointer;
+	background: url(../img/galeria/a21.png) center center no-repeat;
+	overflow: hidden;
+}
+.jssora21l { background-position: -3px -33px; }
+.jssora21r { background-position: -63px -33px; }
+.jssora21l:hover { background-position: -123px -33px; }
+.jssora21r:hover { background-position: -183px -33px; }
+.jssora21l.jssora21ldn { background-position: -243px -33px; }
+.jssora21r.jssora21rdn { background-position: -303px -33px; }
+
+/* jssor slider bullet navigator skin 05 css */
+/*
+.jssorb05 div           (normal)
+.jssorb05 div:hover     (normal mouseover)
+.jssorb05 .av           (active)
+.jssorb05 .av:hover     (active mouseover)
+.jssorb05 .dn           (mousedown)
+*/
+.jssorb05 {
+	position: absolute;
+}
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+	position: absolute;
+	/* size of bullet elment */
+	width: 16px;
+	height: 16px;
+	background: url(../img/galeria/b05.png) no-repeat;
+	overflow: hidden;
+	cursor: pointer;
+}
+.jssorb05 div { background-position: -7px -7px; }
+.jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+.jssorb05 .av { background-position: -67px -7px; }
+.jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+.slider_titulo{
+	color: #fff;
+	font-size: 45px;
+	font-weight: 100;
+}
+
+.btn-menu-top {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: #FFF;
+	margin-top: 10px;
+}
+
+
+footer {
+    position: fixed;
+    height: 50px;
+	background-color: #006940;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* WikiZoo */
+
+/* buscador */
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; /* remove the search and cancel icon */
+}
+input[type=search] {
+	background: #EDEDED url("../img/wikizoo/lupa.png") no-repeat scroll 9px center;
+	border: 1px solid #CCC;
+	padding: 9px 10px 9px 32px;
+	width: 92px;
+	border-radius: 10em;
+	transition: all 0.5s ease 0s;
+}
+input[type=search]:focus {
+	width: 90%;
+	padding-left: 32px;
+	background-color: #fff;
+	border-color: #006940;
+	
+	-webkit-box-shadow: 0 0 5px rgba(0,105,64,.5);
+	-moz-box-shadow: 0 0 5px rgba(0,105,64,.5);
+	box-shadow: 0 0 5px rgba(0,105,64,.5);
+}
+/* placeholder */
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+/* alargar */
+#alargar-input input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#alargar-input input[type=search]:hover {
+	background-color: #fff;
+}
+#alargar-input input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+#alargar-input input:-moz-placeholder {
+	color: transparent;
+}
+#alargar-input input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.galeria_foto{
+	max-height: 80px;
+	margin: 10px;
+	border: 2px solid #006940;
+	border-radius: 10px;	
+}
