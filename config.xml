@@ -35,4 +35,5 @@
         <allow-intent href="itms-apps:*" />
     </platform>	
 	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+	<gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
 </widget>
